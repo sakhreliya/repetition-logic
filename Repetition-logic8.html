@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let inputLetter = prompt("Enter the months:").toUpperCase();
+
+        let day;
+
+        if (inputLetter === 'M') {
+            day = "Monday";
+        } else if (inputLetter === 'T') {
+            let secondLetter = prompt("Enter the second letter (u or h):").toLowerCase();
+            if (secondLetter === 'u') {
+                day = "Tuesday";
+            } else if (secondLetter === 'h') {
+                day = "Thursday";
+            } else {
+                day = "Invalid input";
+            }
+        } else if (inputLetter === 'W') {
+            day = "Wednesday";
+        } else if (inputLetter === 'F') {
+            day = "Friday";
+        } else if (inputLetter === 'S') {
+            let secondLetter = prompt("Enter the second letter (a or u):").toLowerCase();
+            if (secondLetter === 'a') {
+                day = "Saturday";
+            } else if (secondLetter === 'u') {
+                day = "Sunday";
+            } else {
+                day = "Invalid input";
+            }
+        } else {
+            day = "Invalid input";
+        }
+
+        console.log(`The day is: ${day}`);
+    </script>
+</body>
+
+</html>

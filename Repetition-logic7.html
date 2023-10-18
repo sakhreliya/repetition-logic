@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function month(a) {
+            let name;
+
+            switch (a) {
+                case 1:
+                    name = "January";
+                    break;
+                case 2:
+                    name = "February";
+                    break;
+                case 3:
+                    name = "March";
+                    break;
+                case 4:
+                    name = "April";
+                    break;
+                case 5:
+                    name = "May";
+                    break;
+                case 6:
+                    name = "June";
+                    break;
+                case 7:
+                    name = "July";
+                    break;
+                case 8:
+                    name = "August";
+                    break;
+                case 9:
+                    name = "September";
+                    break;
+                case 10:
+                    name = "October";
+                    break;
+                case 11:
+                    name = "November";
+                    break;
+                case 12:
+                    name = "December";
+                    break;
+                default:
+                    name = "Invalid months";
+            }
+
+            return name;
+        }
+
+        let userInput = prompt("Enter a months");
+        let a = parseInt(userInput);
+
+        if (a >= 1 && a <= 12) {
+
+            let result = month(a);
+            console.log("Month: " + result);
+        } else {
+            console.log(" Please enter a valid month ");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num1 = parseFloat(prompt("Enter the first number:"));
+        let num2 = parseFloat(prompt("Enter the second number:"));
+        let num3 = parseFloat(prompt("Enter the third number:"));
+        let num4 = parseFloat(prompt("Enter the fourth number:"));
+
+        let max;
+
+        if (num1 > num2) {
+            if (num1 > num3) {
+                if (num1 > num4) {
+                    max = num1;
+                } else {
+                    max = num4;
+                }
+            } else {
+                if (num3 > num4) {
+                    max = num3;
+                } else {
+                    max = num4;
+                }
+            }
+        } else {
+            if (num2 > num3) {
+                if (num2 > num4) {
+                    max = num2;
+                } else {
+                    max = num4;
+                }
+            } else {
+                if (num3 > num4) {
+                    max = num3;
+                } else {
+                    max = num4;
+                }
+            }
+        }
+
+        console.log(`Maximum number: ${max}`);
+    </script>
+</body>
+
+</html>

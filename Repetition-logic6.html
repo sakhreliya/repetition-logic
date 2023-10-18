@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+      
+        const physics = parseFloat(prompt('Enter Physics marks:'));
+        const chemistry = parseFloat(prompt('Enter Chemistry marks:'));
+        const biology = parseFloat(prompt('Enter Biology marks:'));
+        const mathematics = parseFloat(prompt('Enter Mathematics marks:'));
+        const computer = parseFloat(prompt('Enter Computer marks:'));
+
+
+        if ([physics, chemistry, biology, mathematics, computer].some(isNaN)) {
+            console.log('Invalid input');
+        } else {
+
+            const percentage = ((physics + chemistry + biology + mathematics + computer) / 500) * 100;
+
+            const grade = percentage >= 90 ? 'Grade A' :
+                percentage >= 80 ? 'Grade B' :
+                    percentage >= 70 ? 'Grade C' :
+                        percentage >= 60 ? 'Grade D' :
+                            percentage >= 50 ? 'Grade E' :
+                                percentage >= 40 ? 'Grade F' : 'Fail';
+
+            console.log('Percentage: ' + percentage + '%');
+            console.log('Grade: ' + grade);
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num1 = parseFloat(prompt("Enter the first number (a):"));
+        let num2 = parseFloat(prompt("Enter the second number (b):"));
+        let operation = prompt("Select an operation (+, -, *, /):");
+
+        let result;
+
+        switch (operation) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    console.log("Cannot divide by zero!");
+                    break;
+                }
+                break;
+            default:
+                console.log("Invalid operation");
+                break;
+        }
+
+        if (typeof result !== "undefined") {
+            console.log(`The Ans: ${result}`);
+        }
+    </script>
+</body>
+
+</html>
